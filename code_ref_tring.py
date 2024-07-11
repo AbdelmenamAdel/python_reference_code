@@ -57,5 +57,19 @@
 # ? Formatting date and time website   ###########   https://strftime.org/
 # print(mybirthday.strftime("%A %d %b, %Y"))
 # print(dateNow.strftime("%A %d %b, %Y"))
-#!============================= Modules datetime and time ===============================
+#!============================= Decoration and SpeedTest ===============================
+# from time import time
+# def speedtest(func):
+#     def nestedFun():
+#         start = time()
+#         func()
+#         end = time()
+#         print(f"the function {func.__name__} took {end - start} seconds")
+#     return nestedFun
 
+# @speedtest
+# def loop():
+#     for i in range(5000):
+#         print(i)
+# loop()
+#!=============================  ===============================
