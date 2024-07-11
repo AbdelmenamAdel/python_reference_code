@@ -31,7 +31,7 @@
 #         print(f"{info} is: {people[name][info]}")
 # else :
 #     print("\nEnd of loop\n".center(40,'*'))
-#!============================= Modules pyfiglet and termcolor ==============================
+#!============================= Modules (pyfiglet and termcolor) ==============================
 # import pyfiglet
 # import termcolor
 
@@ -40,7 +40,7 @@
 # ascii_banner = termcolor.colored(pyfiglet.figlet_format("Abdelmoneim"), color="red", attrs=["bold"])
 # print(ascii_banner)
 
-#!============================= Modules datetime and time ===============================
+#!============================= Modules (datetime) datetime and time ===============================
 # import datetime as dt
 # print(f"the current year is : {dt.datetime.now().year}")
 # print(f"the current mounth is : {dt.datetime.now().month}")
@@ -57,7 +57,7 @@
 # ? Formatting date and time website   ###########   https://strftime.org/
 # print(mybirthday.strftime("%A %d %b, %Y"))
 # print(dateNow.strftime("%A %d %b, %Y"))
-#!============================= Decoration and SpeedTest ===============================
+#!============================= Modules (Time) Decoration and SpeedTest ===============================
 # from time import time
 # def speedtest(func):
 #     def nestedFun():
