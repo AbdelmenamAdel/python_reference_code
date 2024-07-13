@@ -72,4 +72,16 @@
 #     for i in range(5000):
 #         print(i)
 # loop()
-#!=============================  ===============================
+#!============================= OOP lecture example ===============================
+# class MyClass:
+#     x=5 #! variable class
+#     def __init__(self,name,age,level):
+#         self.name=name        #! variable object
+#         self.age=age          #! variable object
+#         self.level=level      #! variable object
+
+#     def __str__(self):
+#         return f"my name is {self.name} and my age is {self.age} and my level is {self.level}"
+
+# obj=MyClass("Abdelmoneim",20,10)
+# print(obj)
