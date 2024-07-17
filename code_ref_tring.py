@@ -160,3 +160,20 @@
 # obj=BMW("BMW","X5","2024","V8",7000000)
 # print(obj.__str__())
 # obj.power()
+#!============================= OOP example 4 Multiple Inheritance and Polymorphism ===============================
+class A:                                    #! Parent class
+    def do_something(self):                 #! Main method
+        print("I am A class") 
+        raise NotImplementedError("Drived class must implement this method")
+class B(A):                                #! Child class ( Single Inheritance )
+    def do_something(self):                #! Overrided method ( with another form )
+        print("I am B class")
+class C(A):                                #! Child class ( Single Inheritance )
+      def do_something(self):                #! Overrided method ( with another form )
+        print("I am C class")
+class D(B,C):                              #! Child class ( Multiple Inheritance )
+    def do_something(self):                #! Overrided method ( with another form)
+        print("I am D class")
+    
+obj1=D()
+obj1.do_something()
