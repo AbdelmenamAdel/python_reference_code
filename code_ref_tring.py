@@ -72,7 +72,7 @@
 #     for i in range(5000):
 #         print(i)
 # loop()
-#!============================= OOP lecture example ===============================
+#!============================= OOP example 1 ===============================
 # class MyClass:
 #     x=5 #! Class variable 
 #     def __init__(self,name,age,level):
@@ -85,55 +85,56 @@
 
 # obj=MyClass("Abdelmoneim",20,10)
 # print(obj)
-#!============================= OOP example member ===============================
-class Member:
-    not_allowed_members=["Shit","Hell","Baloot"]  #! Static / Class variable
-    user_num=0                                    #! Static / Class variable
-    def __init__(self,fname,mname,lname,gender):  #! Constructor
-        self.fname=fname                          #! Instance variable
-        self.mname=mname                          #! Instance variable
-        self.lname=lname                          #! Instance variable
-        self.gender=gender                        #! Instance variable
-        Member.user_num+=1 
-    @classmethod                                  #! Class method
-    def show_users_count(cls):
-        print(f"We have {cls.user_num} users in our system.")
-    @staticmethod                                 #! Static method
-    def say_hello():
-        print("Hello from static method")
-    def __str__(self):                            #! Magic method
-        return f"My name is {self.fname} and my gender is {self.gender}"
-    def full_name(self):                          #! Magic method
-        if(self.fname in Member.not_allowed_members):
-            raise ValueError("This name is not allowed")
-        else :
-            return f"{self.fname} {self.mname} {self.lname}"
-    def name_with_title(self):                     #! Magic method
-        if(self.gender=="Male"):
-            return f"Hello Mr. {self.fname}"
-        elif(self.gender=="Female"):
-            return f"Hello Mrs. {self.fname}"
-        else :
-            return f"Hello {self.fname}"
-    def get_all_info(self):                        #! Magic method
-        return f"{self.name_with_title()}, Your full name is {self.full_name()}"
-    def delete_user(self):                         #! Magic method
-        Member.user_num-=1
-        print(f"{self.fname} is deleted")
-print(Member.user_num) 
-obj1=Member("Abdelmoneim","Adel","Abdelmoneim","Male")
-obj2=Member("Mohamed","Adel","Abdelmoneim","Male")
-obj3=Member("Basmala","Adel","Abdelmoneim","Female")
-obj4=Member("Sara","Adel","Abdelmoneim","Female")
-obj5=Member("Khalid","Adel","Abdelmoneim","Male")
-obj6=Member("Hassan","Adel","Abdelmoneim","Male")
-print(Member.user_num)
-obj5.delete_user()
-print(obj4.__str__())
-Member.show_users_count()
-print(obj1.get_all_info())
-print("@"*30)
-print(obj2.get_all_info())
-Member.say_hello()
-Member.show_users_count()
-print(Member.user_num)
+#!============================= OOP example 2 Member ===============================
+# class Member:
+#     not_allowed_members=["Shit","Hell","Baloot"]  #! Static / Class variable
+#     user_num=0                                    #! Static / Class variable
+#     def __init__(self,fname,mname,lname,gender):  #! Constructor
+#         self.fname=fname                          #! Instance variable
+#         self.mname=mname                          #! Instance variable
+#         self.lname=lname                          #! Instance variable
+#         self.gender=gender                        #! Instance variable
+#         Member.user_num+=1 
+#     @classmethod                                  #! Class method
+#     def show_users_count(cls):
+#         print(f"We have {cls.user_num} users in our system.")
+#     @staticmethod                                 #! Static method
+#     def say_hello():
+#         print("Hello from static method")
+#     def __str__(self):                            #! Magic method
+#         return f"My name is {self.fname} and my gender is {self.gender}"
+#     def full_name(self):                          #! Magic method
+#         if(self.fname in Member.not_allowed_members):
+#             raise ValueError("This name is not allowed")
+#         else :
+#             return f"{self.fname} {self.mname} {self.lname}"
+#     def name_with_title(self):                     #! Magic method
+#         if(self.gender=="Male"):
+#             return f"Hello Mr. {self.fname}"
+#         elif(self.gender=="Female"):
+#             return f"Hello Mrs. {self.fname}"
+#         else :
+#             return f"Hello {self.fname}"
+#     def get_all_info(self):                        #! Magic method
+#         return f"{self.name_with_title()}, Your full name is {self.full_name()}"
+#     def delete_user(self):                         #! Magic method
+#         Member.user_num-=1
+#         print(f"{self.fname} is deleted")
+# print(Member.user_num) 
+# obj1=Member("Abdelmoneim","Adel","Abdelmoneim","Male")
+# obj2=Member("Mohamed","Adel","Abdelmoneim","Male")
+# obj3=Member("Basmala","Adel","Abdelmoneim","Female")
+# obj4=Member("Sara","Adel","Abdelmoneim","Female")
+# obj5=Member("Khalid","Adel","Abdelmoneim","Male")
+# obj6=Member("Hassan","Adel","Abdelmoneim","Male")
+# print(Member.user_num)
+# obj5.delete_user()
+# print(obj4.__str__())
+# Member.show_users_count()
+# print(obj1.get_all_info())
+# print("@"*30)
+# print(obj2.get_all_info())
+# Member.say_hello()
+# Member.show_users_count()
+# print(Member.user_num)
+#!============================= OOP example 3 Inheritance ===============================
