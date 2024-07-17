@@ -103,21 +103,21 @@
 #         print("Hello from static method")
 #     def __str__(self):                            #! Magic method
 #         return f"My name is {self.fname} and my gender is {self.gender}"
-#     def full_name(self):                          #! Magic method
+#     def full_name(self):                          #! Normal method
 #         if(self.fname in Member.not_allowed_members):
 #             raise ValueError("This name is not allowed")
 #         else :
 #             return f"{self.fname} {self.mname} {self.lname}"
-#     def name_with_title(self):                     #! Magic method
+#     def name_with_title(self):                     #! Normal method
 #         if(self.gender=="Male"):
 #             return f"Hello Mr. {self.fname}"
 #         elif(self.gender=="Female"):
 #             return f"Hello Mrs. {self.fname}"
 #         else :
 #             return f"Hello {self.fname}"
-#     def get_all_info(self):                        #! Magic method
+#     def get_all_info(self):                        #! Normal method
 #         return f"{self.name_with_title()}, Your full name is {self.full_name()}"
-#     def delete_user(self):                         #! Magic method
+#     def delete_user(self):                         #! Normal method
 #         Member.user_num-=1
 #         print(f"{self.fname} is deleted")
 # print(Member.user_num) 
@@ -137,4 +137,26 @@
 # Member.say_hello()
 # Member.show_users_count()
 # print(Member.user_num)
-#!============================= OOP example 3 Inheritance ===============================
+#!============================= OOP example 3 Inheritance and Overriding ===============================
+# class Car:                                #! Parent class
+#     def __init__(self,brand,model,year):  #! Constructor
+#         self.brand=brand
+#         self.model=model
+#         self.year=year
+#     def __str__(self):                    #! Magic method
+#         return f"{self.brand} {self.model} {self.year}"
+#     def power(self):
+#         print(f"Works with petrol")
+# class BMW(Car):                            #! Child class
+#     def __init__(self,brand,model,year,engine,price):
+#         self.engine=engine
+#         self.price=price
+#         super().__init__(brand,model,year)  #! Inheritance 
+#     def __str__(self):
+#         return f"Your BMW Info : \nBrand : {self.brand} \nModel : {self.model} \nYear : {self.year} \nEngine : {self.engine} \nPrice : {self.price}"
+#     def power(self):                         #! Overriding
+#         print(f"Works with diesel")          #! becaiuse of the same name of function in parent class it became overrided
+    
+# obj=BMW("BMW","X5","2024","V8",7000000)
+# print(obj.__str__())
+# obj.power()
