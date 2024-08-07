@@ -177,3 +177,18 @@
     
 # obj1=D()
 # obj1.do_something()
+#!============================= wep scraping (selenium) ===============================
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import time
+
+# driver = webdriver.Chrome()
+
+# driver.get('https://elzero.org')
+# # ! I couldn't get it to work
+# # element = driver.find_element_by_css_selector(".search-form").send_keys('Flutter')
+# # element.send_keys('WebDriver')
+# # element.submit()
+
+# time.sleep(500)
+# # driver.quit()
