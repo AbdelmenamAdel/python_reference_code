@@ -192,3 +192,114 @@
 
 # time.sleep(500)
 # # driver.quit()
+#!============================= NumPy Package ===============================
+# ? multidimentional array [Matrix] not only on dimention
+# import numpy as np
+# my_array=np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(my_array)
+# print(my_array[0][1])
+# print(my_array[0,1])
+# print(my_array.ndim)
+# print(my_array.shape)
+# ? Slicing of array
+# import numpy as np
+# my_array=np.array([["A","B","C","D","E"],["F","G","H","I","J"],["K","L","M","N","O"],["P","Q","R","S","T"],["U","V","W","X","Y"]])
+# print(">>"*15)
+# print(my_array)
+# print(my_array.ndim)
+# print(my_array.shape)
+# print(my_array[1,1:4])
+# print("--"*15)
+# print(my_array[1:4,1:4])
+# print("<<"*15)
+# ? Compare the memory location of list and array
+# import numpy as np
+# my_list=[1,2,3,4,5]
+# print(id(my_list[0]))
+# print(id(my_list[1]))
+# my_array=np.array([1,2,3,4,5])
+# print(id(my_array[0]))  
+# print(id(my_array[1]))
+# ? Compare the type of list and array
+# import numpy as np
+# my_list=[1,2,True,"4",5.50]
+# my_array=np.array([1,2,True,"4",5.50])
+# print(type(my_list[0]))
+# print(type(my_array[0]))
+# ? Compare the performance of list and array
+# import numpy as np
+# import time as t
+# elements=15000000
+# list1=range(elements)
+# list2=range(elements)
+# start_time=t.time()
+# list3=[x+y for x,y in zip(list1,list2)]
+# print(t.time()-start_time)
+# start_time=t.time()
+# array1 = np.arange(elements)
+# array2 = np.arange(elements)
+# array3 = array1 + array2
+# print(t.time()-start_time)
+# ? Compare the  memory size of list and array
+# import numpy as np
+# import sys 
+# my_list=range(100)
+# print(sys.getsizeof(my_list[0]))
+# print(len(my_list))
+# print(f"Memory size of list is : {sys.getsizeof(my_list[0])*len(my_list)}")
+# my_array=np.arange(100)
+# print(my_array.itemsize)
+# print(my_array.size)
+# print(f"Memory size of array is : {my_array.itemsize*my_array.size}")
+# ? Specify the type of array and change it 
+# import numpy as np
+# # * int or 'int' or 'i'
+# # * float or 'float' or 'f'
+# # * complex or 'complex' or 'c'
+# # * bool or 'bool' or 'b'
+# # * str or 'str' or 's'
+# # ! f -> float32 , float -> float64 , i -> int32 , int ->64 ,etc.
+# print(">"*30)
+# my_array=np.array([1,2,3,4,5],dtype="int")
+# print(my_array)
+# print(my_array.dtype)
+# print("-"*30)
+# my_array=my_array.astype("f") # float32
+# print(my_array)
+# print(my_array.dtype)
+# print("<"*30)
+# ? Min , Max , Sum of array
+# import numpy as np
+# my_array=np.array([1,2,3,4,5])
+# print(my_array)
+# print(my_array.min())
+# print(my_array.max())
+# print(my_array.sum())
+# ? Ravel of array ( 1D )
+# ! ravel used to convert ND array to 1D array
+# import numpy as np
+# my_array=np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(my_array)
+# print(my_array.ndim)
+# x=my_array.ravel()
+# print(my_array.ravel())
+# print(x.ndim)
+# ? Shape and Reshape of array
+# import numpy as np
+# print(">>"*15)
+# my_array=np.array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
+# print(my_array)
+# print(my_array.ndim)
+# print(my_array.shape)
+# print("--"*15)
+# my_array=my_array.reshape(3,4)
+# print(my_array)
+# print(my_array.ndim)
+# print(my_array.shape)
+# print("--"*15)
+# my_array=my_array.reshape(2,6)
+# print(my_array)
+# print(my_array.ndim)
+# print(my_array.shape)
+# print("<<"*15)
+# ! Virtual Environment & Virtual Environment Wrappers (venv)
