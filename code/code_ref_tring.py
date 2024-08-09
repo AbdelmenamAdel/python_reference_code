@@ -303,3 +303,64 @@
 # print(my_array.shape)
 # print("<<"*15)
 # ! Virtual Environment & Virtual Environment Wrappers (venv)
+#!============================= NumPy For Normalization ===============================
+# ? Normalization if you want to understand and going on Machine Learning
+# import numpy as np
+# import pandas as pd
+# data = [
+#     [15.123, 2, 10.4567, 7],
+#     [3.789, 14, 0.001, 6],
+#     [19, 16.2345, 20, 11.987],
+#     [7, 11.111, 9.8765, 3],
+#     [8, 18.654, 1.234, 15],
+#     [12.3456, 5, 13.89, 8],
+#     [4, 6.543, 17, 14.0012]
+# ]
+# # ? notice the data before data frame
+# # print(data[0]) # ! [15.123, 2, 10.4567, 7]
+# data = pd.DataFrame(data)
+# # ! data frame not only to show the data in table
+# # ! but also to do mathematical operation
+# # ! it convert each row to column
+# # ! so you must be careful when you use it
+# # ! you should re shape it to the past shape
+# # print(data)
+# # ? notice the data after data frame
+# # print(data[0]) # ! [15.123,3.789,19,7,8,12.3456,4]
+# # print(data.shape) # ! (7,4)
+# print("--"*15)
+
+# def normalization(n):
+#     scale =(data[n]-min(data[n]))/(max(data[n])-min(data[n]))
+#     scale=np.array(scale)
+#     return scale
+# s_data=np.array([normalization(0),normalization(1),normalization(2),normalization(3)])
+# # print(s_data)
+# # print(s_data.shape)
+# print("--"*15)
+# s_data=s_data.reshape(7,4)
+# print(s_data)
+# print("--"*15)
+# trans=s_data.T
+# covariance=np.cov(trans)
+# # print(covariance)
+# eigval,eigvec=np.linalg.eig(covariance)
+# # print(eigval)
+# # print(eigvec)
+# res=eigval[3]/sum(eigval)+eigval[2]/sum(eigval)+eigval[1]/sum(eigval)
+# # # print(res)
+# projected1 = np.array(s_data.dot(eigvec.T[1]))
+# projected2 = np.array(s_data.dot(eigvec.T[2]))
+# projected3 = np.array(s_data.dot(eigvec.T[3]))
+
+# final = np.array([projected1,projected2,projected3]).reshape(7,3)
+# print(final)
+# print("--"*15)
+#!============================= NumPy another way for Normalization ===============================
+# ? Normalization using sklearn package
+# from sklearn.decomposition import PCA
+# dec = PCA(n_components=3)
+# final=dec.fit_transform(s_data)
+# print(final)
+#!============================= Pandas Package ===============================
+
