@@ -363,4 +363,14 @@
 # final=dec.fit_transform(s_data)
 # print(final)
 #!============================= Pandas Package ===============================
+import pandas as pd
+# weather_data=[
+#     ("20/8/2024", 30, "Rainy", 6),
+#     ("21/8/2024", 35, "Sunny", 7),
+#     ("22/8/2024", 29, "Cloudy", 8),
+#     ("23/8/2024", 31, "Rainy", 9),
+#     ("24/8/2024", 34.4, "Sunny", 10)
+# ]
+# df=pd.DataFrame(data=weather_data,columns=["day","temp","event","wind"])
+# print(df)
 
