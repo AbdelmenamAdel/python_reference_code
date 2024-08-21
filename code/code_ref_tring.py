@@ -373,4 +373,11 @@ import pandas as pd
 # ]
 # df=pd.DataFrame(data=weather_data,columns=["day","temp","event","wind"])
 # print(df)
+# weather_data={
+#     "day":["20/8/2024","21/8/2024","22/8/2024","23/8/2024","24/8/2024"],
+#     "temp":[30,35,29,31,34.4],
+#     "event":["Rainy","Sunny","Cloudy","Rainy","Sunny"],
+#     "wind":[6,7,8,9,10]
+# }
+
 
