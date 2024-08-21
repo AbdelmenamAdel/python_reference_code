@@ -389,4 +389,5 @@ import pandas as pd
 # ]
 # df=pd.DataFrame(weather_data)
 # print(df)
-
+# weather_data=pd.read_excel( "excel/Book1.xlsx",sheet_name="Sheet1")
+# print(weather_data)
