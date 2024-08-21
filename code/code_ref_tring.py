@@ -380,4 +380,13 @@ import pandas as pd
 #     "wind":[6,7,8,9,10]
 # }
 
+# weather_data=[
+#     {"day": "20/8/2024", "temp": 30, "event": "Rainy", "wind": 6},
+#     {"day": "21/8/2024", "temp": 35, "event": "Sunny", "wind": 7},
+#     {"day": "22/8/2024", "temp": 29, "event": "Cloudy", "wind": 8},
+#     {"day": "23/8/2024", "temp": 31, "event": "Rainy", "wind": 9},
+#     {"day": "24/8/2024", "temp": 34.4, "event": "Sunny", "wind": 10}
+# ]
+# df=pd.DataFrame(weather_data)
+# print(df)
 
