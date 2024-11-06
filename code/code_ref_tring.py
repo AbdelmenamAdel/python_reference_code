@@ -241,16 +241,16 @@
 # array3 = array1 + array2
 # print(t.time()-start_time)
 # ? Compare the  memory size of list and array
-# import numpy as np
-# import sys 
-# my_list=range(100)
-# print(sys.getsizeof(my_list[0]))
-# print(len(my_list))
-# print(f"Memory size of list is : {sys.getsizeof(my_list[0])*len(my_list)}")
-# my_array=np.arange(100)
-# print(my_array.itemsize)
-# print(my_array.size)
-# print(f"Memory size of array is : {my_array.itemsize*my_array.size}")
+import numpy as np
+import sys 
+my_list=range(100)
+print(sys.getsizeof(my_list[0]))
+print(len(my_list))
+print(f"Memory size of list is : {sys.getsizeof(my_list[0])*len(my_list)}")
+my_array=np.arange(100)
+print(my_array.itemsize)
+print(my_array.size)
+print(f"Memory size of array is : {my_array.itemsize*my_array.size}")
 # ? Specify the type of array and change it 
 # import numpy as np
 # # * int or 'int' or 'i'
