@@ -42,3 +42,4 @@
 # # Create a dictionary with primes and their squares
 # pc_dict = {i: i**2 for i in primes}
 # print(pc_dict)
+
